@@ -67,14 +67,17 @@ campanha de Clube:
    pontos em 12 meses daquela modalidade). Se o bônus só vale para algumas
    modalidades, dizer isso de forma neutra no ⚠️ Importante
    (ex.: "Bônus válido só na assinatura mensal").
-4. A mensagem só traz modalidades que um assinante NOVO consegue contratar
-   na vitrine naquele dia. Preços que existem no sistema mas não aparecem pra
-   contratação (ex.: anual escondido na vitrine e "indisponível" no FAQ) ficam
-   só no rodapé, com o milheiro calculado, pra comparação. Quando o anual
-   voltar a aparecer na vitrine (seletor visível / esfPlanType com yearly),
-   entram as três modalidades na mensagem. (O dono já é assinante, então não
-   consegue conferir logado o que um assinante novo vê — a vitrine sem login é
-   a referência.)
+4. A mensagem traz SEMPRE as três modalidades de cada plano (mensal, anual
+   parcelado e anual à vista), mesmo que a vitrine pública mostre só o mensal:
+   os preços anuais vêm do sistema da Esfera (ver Notas de navegação, API de
+   produto) e são os mesmos que os sites de milhas publicam (ex.: campanha
+   igual de julho/2026 no Pontos pra Voar, com as três modalidades). Se uma
+   modalidade não existir nem no sistema, aí sim fica de fora. Se o
+   regulamento restringir o bônus a uma modalidade, dizer isso de forma neutra
+   no ⚠️ Importante.
+5. Na dúvida sobre preço ou disponibilidade, pesquisar a campanha em sites de
+   milhas (Pontos pra Voar, Passageiro de Primeira, Melhores Destinos,
+   Melhores Cartões) como fonte de conferência — não como fonte primária.
 
 
 ## Passo 2 — Levantamento de candidatas de parceiro
@@ -296,3 +299,6 @@ então essa checagem ainda não roda.
   "anual indisponível". Regra nova: conferir sempre mensal, anual parcelado e
   anual à vista na vitrine e no regulamento (ver "Modalidades de pagamento"
   no Passo 1B; vale também para o Clube Livelo).
+- 12/10/2026 — Preço anual escondido na vitrine não é motivo pra tirar o anual
+  da mensagem: a mesma campanha de julho/2026 foi publicada pelos blogs com as
+  três modalidades. Regra: sempre as três, com preços do sistema.
