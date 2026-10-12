@@ -217,6 +217,9 @@ no método — na seção abaixo.
 - Cards da listagem de parceiros Livelo: `a[data-testid=a_PartnerCard_card_link]` (via `js`, após rolar); filtrar por "Promo|Era". Página do parceiro: texto "Campanha válida de X a Y" + "Termina em ...".
 - Carrossel Livelo: `--container "div.swiper.css-1mcxol9" --seta "button.button-next"` (3 slides em 12/10; classes css-* podem mudar).
 - Esfera: digitar a loja no input da página junte-pontos/esf02163 e ler o texto depois de "Todas as categorias".
+- Esfera — fonte mais rápida: artigo diário "Campanhas - DD/MM/AAAA" em esfera.zendesk.com/hc/pt-br/sections/52066838928275 (via `links`). Traz a tabela de parceiros com Data início/fim e os termos de campanhas do Clube; filtrar "Data início" = hoje e comparar com o artigo da véspera. Depois conferir cada um na página do parceiro.
+- Esfera — página de parceiro: links `/p/<loja>/<id>` (ex. decolar/e000100402, hoteiscom/e000100148); com `links --rolar` em junte-pontos/esf02163 os cards mostram "Ganhe X pts a cada real". Validade em "Condições válidas para compras efetuadas de ... até ...".
+- Clube Esfera: a URL é esfera.com.vc/clube (/clube-esfera dá erro). Preços mensais nos cards dos planos; o banner do topo traz a campanha (nome do arquivo da imagem começa com a data AAAAMMDD). "Selecionar" exige login; o FAQ "Como posso pagar" diz se o anual está disponível.
 
 ## Correções de método
 
