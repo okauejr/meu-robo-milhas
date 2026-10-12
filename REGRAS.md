@@ -335,6 +335,7 @@ https://shopping.azulfidelidade.com.br/categoria/74654/meu-resgate-favorito
 
 - Usar `/usr/bin/python3` (o `python` do PATH pode não enxergar o playwright instalado).
 - Cards da listagem de parceiros Livelo: `a[data-testid=a_PartnerCard_card_link]` (via `js`, após rolar); filtrar por "Promo|Era". Página do parceiro: texto "Campanha válida de X a Y" + "Termina em ...".
+- Carrossel da HOME da Livelo: mesmo container/seta, mas um pop-up (`[id^=web_modal]`) cobre a seta e o `carrossel` trava; remover antes de cada clique (`document.querySelectorAll('[id^=web_modal]').forEach(e=>e.remove())`). Em 12/10 eram 6 slides.
 - Carrossel Livelo: `--container "div.swiper.css-1mcxol9" --seta "button.button-next"` (3 slides em 12/10; classes css-* podem mudar).
 - Esfera: digitar a loja no input da página junte-pontos/esf02163 e ler o texto depois de "Todas as categorias".
 - Esfera — fonte mais rápida: artigo diário "Campanhas - DD/MM/AAAA" em esfera.zendesk.com/hc/pt-br/sections/52066838928275 (via `links`). Traz a tabela de parceiros com Data início/fim e os termos de campanhas do Clube; filtrar "Data início" = hoje e comparar com o artigo da véspera. Depois conferir cada um na página do parceiro.
