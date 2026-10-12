@@ -67,6 +67,14 @@ campanha de Clube:
    pontos em 12 meses daquela modalidade). Se o bônus só vale para algumas
    modalidades, dizer isso de forma neutra no ⚠️ Importante
    (ex.: "Bônus válido só na assinatura mensal").
+4. A mensagem só traz modalidades que um assinante NOVO consegue contratar
+   na vitrine naquele dia. Preços que existem no sistema mas não aparecem pra
+   contratação (ex.: anual escondido na vitrine e "indisponível" no FAQ) ficam
+   só no rodapé, com o milheiro calculado, pra comparação. Quando o anual
+   voltar a aparecer na vitrine (seletor visível / esfPlanType com yearly),
+   entram as três modalidades na mensagem. (O dono já é assinante, então não
+   consegue conferir logado o que um assinante novo vê — a vitrine sem login é
+   a referência.)
 
 
 ## Passo 2 — Levantamento de candidatas de parceiro
