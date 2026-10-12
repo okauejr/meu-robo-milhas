@@ -258,13 +258,53 @@ topo de livelo.com.br e da página de parceiros). Nesse disparo:
    só vai o que ainda não foi enviado, e sem novidade não vai nada.
 5. Registrar no `historico.md` (na entrada do dia, marcando "18h"), commit e push.
 
-## Azul — Meu Resgate Favorito (pendente)
+## Checagem das 15h — Azul "Meu Resgate Favorito"
 
+Resgates relâmpago no Shopping Azul (produtos por poucos pontos, poucas
+unidades), que abrem por volta das 15h e nem todo dia. Página oficial:
 https://shopping.azulfidelidade.com.br/categoria/74654/meu-resgate-favorito
-(resgates relâmpago, normalmente às 15h). Em 12/10/2026 os sites da Azul
-(shopping.azulfidelidade.com.br, azulfidelidade.com.br, voeazul.com.br)
-recusaram o acesso a partir da nuvem ("Access Denied" / conexão encerrada),
-então essa checagem ainda não roda.
+
+Os sites da Azul (shopping.azulfidelidade.com.br, azulfidelidade.com.br,
+voeazul.com.br) recusam acesso vindo da nuvem ("Access Denied" / conexão
+encerrada; testado em 12/10/2026), então a checagem usa os sites de milhas que
+publicam a oferta minutos depois de ela abrir (Passageiro de Primeira ~15h02–
+15h15, Pontos pra Voar ~15h01–15h13):
+
+1. `/usr/bin/python3 scripts/azul_resgate.py` — lista os posts de HOJE sobre o
+   Meu Resgate Favorito nas duas fontes. "NADA" → encerrar sem enviar nada.
+2. Antes, tentar a página oficial com `scripts/navegar.py texto`; se abrir, ela
+   é a fonte primária. Se não abrir, ler os posts encontrados (os dois, quando
+   houver) e cruzar: cada produto, pontos, condições (Clube Azul / categoria,
+   limite por CPF, poucas unidades). Divergência entre as fontes → usar o que
+   as duas concordam e anotar no rodapé.
+3. Anti-duplicata contra `historico.md` (mesmo produto e mesmos pontos já
+   enviados = não reenviar).
+4. Card no HTML do dia + mensagem no template abaixo, sem foto (a imagem dos
+   posts tem a marca do blog). O link é sempre o da página oficial acima.
+   Nunca citar os blogs na mensagem.
+5. Enviar com `scripts/enviar_telegram.py relatorios/AAAA-MM-DD.html --silencioso`,
+   registrar no `historico.md` (marcando "15h — Azul"), commit e push.
+
+Template:
+
+```
+*AZUL — MEU RESGATE FAVORITO: PRODUTOS A PARTIR DE X MIL PONTOS*
+
+🎁 Ofertas
+· Produto 1 – X pontos
+· Produto 2 – Y pontos
+
+📅 Validade
+· Hoje (DD/MM), enquanto durarem as unidades
+
+⚠️ Importante
+· Exclusivo para assinantes do Clube Azul e clientes com categoria
+· Poucas unidades — resgate rápido
+· (limite por CPF, se houver)
+
+🔗 Acesse:
+https://shopping.azulfidelidade.com.br/categoria/74654/meu-resgate-favorito
+```
 
 ## Execução automática (nuvem)
 
