@@ -3,15 +3,21 @@
 Manda cada mensagem do grupo (os blocos msg-preview do HTML do dia) como uma
 mensagem de texto separada, em texto puro, pra copiar e colar no WhatsApp com
 os *negritos* intactos. O arquivo HTML em si não é enviado. Sem nenhuma
-oportunidade, manda só um aviso curto.
+oportunidade, manda só um aviso curto (ou nada, com --silencioso).
+
+Mensagens já enviadas ficam registradas em relatorios/AAAA-MM-DD.enviados.json
+e nunca são reenviadas, então dá pra rodar de novo no mesmo dia (checagens
+extras das 18h, correções) sem duplicar nada no Telegram.
 
 Uso:
-  python scripts/enviar_telegram.py relatorios/AAAA-MM-DD.html
+  python scripts/enviar_telegram.py relatorios/AAAA-MM-DD.html [--silencioso]
   python scripts/enviar_telegram.py --texto "mensagem avulsa"
 
 Precisa das variáveis de ambiente TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID.
 """
 import argparse
+import hashlib
+import json
 import os
 import sys
 import time
@@ -48,6 +54,8 @@ def main():
     a = argparse.ArgumentParser()
     a.add_argument("html", nargs="?")
     a.add_argument("--texto")
+    a.add_argument("--silencioso", action="store_true",
+                   help="sem mensagem nova, não manda nada (checagens extras)")
     args = a.parse_args()
     if not TOKEN or not CHAT:
         raise SystemExit("Defina TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID nas variáveis do ambiente.")
@@ -60,14 +68,24 @@ def main():
     if erros:
         raise SystemExit("Não enviei: o HTML não passou na verificação.\n - " + "\n - ".join(erros))
 
-    if not p.mensagens:
-        texto("Nenhuma oportunidade nova começando hoje.")
-    for i, msg in enumerate(p.mensagens):
+    registro = Path(args.html).with_suffix(".enviados.json")
+    enviados = json.loads(registro.read_text(encoding="utf-8")) if registro.exists() else []
+    novas = [m for m in p.mensagens if hashlib.sha1(m.encode()).hexdigest() not in enviados]
+
+    if not novas:
+        if not args.silencioso and not enviados:
+            texto("Nenhuma oportunidade nova começando hoje.")
+            enviados.append("aviso-nada")
+            registro.write_text(json.dumps(enviados, indent=1), encoding="utf-8")
+        print("Nada novo para enviar.")
+        return
+    for i, msg in enumerate(novas):
         if i:
             time.sleep(1)
         texto(msg)
-    print(f"Enviado: {len(p.mensagens)} mensagem(ns).")
-
+        enviados.append(hashlib.sha1(msg.encode()).hexdigest())
+        registro.write_text(json.dumps(enviados, indent=1), encoding="utf-8")
+    print(f"Enviado: {len(novas)} mensagem(ns) nova(s).")
 
 if __name__ == "__main__":
     main()

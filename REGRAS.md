@@ -196,6 +196,32 @@ reabrir o MESMO arquivo do dia (nunca criar um segundo), adicionar o card,
 enviar só a mensagem nova, e documentar a correção no histórico e — se revelar falha sistemática
 no método — na seção abaixo.
 
+## Checagem extra das 18h (Livelo — lançamentos relâmpago)
+
+A Livelo às vezes publica campanhas novas por volta das 18h, que aparecem do
+nada em livelo.com.br/regulamentos-ativos e/ou no banner inicial (carrossel do
+topo de livelo.com.br e da página de parceiros). Nesse disparo:
+
+1. Abrir livelo.com.br/regulamentos-ativos e listar os regulamentos; comparar
+   com os já registrados em `historico.md` e no HTML do dia.
+2. Percorrer o carrossel do banner inicial de livelo.com.br (todos os slides,
+   pela seta, até repetir o primeiro) e o da página de parceiros.
+3. Regulamento ou banner NOVO de campanha (Clube, compra de pontos, parceiro,
+   transferência bonificada etc.) que começa hoje ou amanhã → ler o regulamento
+   inteiro e aplicar as mesmas regras de verificação, cálculo e formatação.
+4. Acrescentar os cards ao HTML do dia (mesmo arquivo) e enviar com
+   `scripts/enviar_telegram.py relatorios/AAAA-MM-DD.html --silencioso`:
+   só vai o que ainda não foi enviado, e sem novidade não vai nada.
+5. Registrar no `historico.md` (na entrada do dia, marcando "18h"), commit e push.
+
+## Azul — Meu Resgate Favorito (pendente)
+
+https://shopping.azulfidelidade.com.br/categoria/74654/meu-resgate-favorito
+(resgates relâmpago, normalmente às 15h). Em 12/10/2026 os sites da Azul
+(shopping.azulfidelidade.com.br, azulfidelidade.com.br, voeazul.com.br)
+recusaram o acesso a partir da nuvem ("Access Denied" / conexão encerrada),
+então essa checagem ainda não roda.
+
 ## Execução automática (nuvem)
 
 - Rodar de segunda a sexta. Usar a data de hoje no fuso America/Sao_Paulo.
