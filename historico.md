@@ -16,4 +16,5 @@ nunca apagar entradas antigas. Formato de cada linha:
 - Clube Esfera — bônus na assinatura: Pro 200% (2.000), Master 200% (5.000), VIP 300% (15.000), Exclusive 300% (60.000), pagos em 12x — 12/10 a 16/10 — só novos/cancelados há +12 meses; só mensal (anual indisponível); milheiro Pro 37,63 / Master 36,65 / VIP 33,90 / Exclusive 32,00
 - Decolar (Esfera) — 6 pts/R$1 Clube Esfera; 4 pts demais (hospedagens) — 12/10 a 16/10 — Clube ativo no crédito
 - Hoteis.com (Esfera) — 4 pts/R$1 — 12/10 a 16/10 — cupom ESFERA4X, check-out até 28/02/2027
+- Revisão Clube Esfera (modalidades): vitrine só oferece mensal pra nova assinatura (sem seletor; FAQ "anual indisponível"); API tem SKUs anuais (10% à vista / 5% parcelado) que não aparecem na vitrine — card #4 mantido, sem reenvio. Milheiro anual se fosse contratável: Pro 33,87/35,75; Master 32,99/34,82; VIP 30,51/32,21; Exclusive 28,80/30,40 (à vista/parcelado).
 - Fora (Esfera): Petlove Saúde (30 pts/R$ 1ª mensalidade, 12 a 18/10) por ser nicho (plano de saúde pet).
