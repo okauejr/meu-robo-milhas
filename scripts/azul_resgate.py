@@ -4,14 +4,19 @@ Os sites da Azul bloqueiam acesso vindo da nuvem, então a checagem das 15h usa
 os sites de milhas que publicam a oferta poucos minutos depois de ela abrir
 (Passageiro de Primeira pelo feed RSS, Pontos pra Voar pela busca do site).
 
-Uso: python scripts/azul_resgate.py [--data AAAA-MM-DD]
+Uso: python scripts/azul_resgate.py [--data AAAA-MM-DD] [--vigiar-ate HH:MM]
 Imprime um post por linha: "horário | fonte | título | link". Sem nada hoje,
 imprime "NADA".
+
+Com --vigiar-ate, fica checando as duas fontes a cada --intervalo segundos
+(padrão 30) e sai assim que aparecer o primeiro post do dia em qualquer uma
+(ou "NADA" quando passar do horário) — para avisar o mais rápido possível.
 """
 import argparse
 import html
 import re
 import sys
+import time
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 
@@ -52,16 +57,37 @@ def pontos_pra_voar():
         yield datetime.fromisoformat(quando).astimezone(BRT), "Pontos pra Voar", titulo, link
 
 
+def do_dia(posts, dia):
+    return [x for x in posts if x[0].strftime("%Y-%m-%d") == dia and FILTRO.search(x[2])]
+
+
 def main():
     a = argparse.ArgumentParser()
     a.add_argument("--data", help="dia a procurar (padrão: hoje em Brasília)")
-    dia = a.parse_args().data or datetime.now(BRT).strftime("%Y-%m-%d")
+    a.add_argument("--vigiar-ate", help="HH:MM (Brasília): checar sem parar até achar ou até esse horário")
+    a.add_argument("--intervalo", type=int, default=30)
+    args = a.parse_args()
+    dia = args.data or datetime.now(BRT).strftime("%Y-%m-%d")
+
+    if args.vigiar_ate:
+        h, m = map(int, args.vigiar_ate.split(":"))
+        fim = datetime.now(BRT).replace(hour=h, minute=m, second=0, microsecond=0)
+        while datetime.now(BRT) < fim:
+            achou = False
+            for fonte in (passageiro_de_primeira, pontos_pra_voar):
+                try:
+                    achou = achou or bool(do_dia(list(fonte()), dia))
+                except Exception as e:
+                    print(f"AVISO: {fonte.__name__} falhou: {e}", file=sys.stderr)
+            if achou:
+                break
+            time.sleep(args.intervalo)
 
     achados, vistos = [], set()
     for fonte in (passageiro_de_primeira, pontos_pra_voar):
         try:
-            for quando, nome, titulo, link in fonte():
-                if quando.strftime("%Y-%m-%d") == dia and FILTRO.search(titulo) and link not in vistos:
+            for quando, nome, titulo, link in do_dia(fonte(), dia):
+                if link not in vistos:
                     vistos.add(link)
                     achados.append(f"{quando:%H:%M} | {nome} | {titulo} | {link}")
         except Exception as e:  # uma fonte fora do ar não derruba a outra

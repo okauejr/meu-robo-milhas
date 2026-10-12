@@ -270,9 +270,19 @@ encerrada; testado em 12/10/2026), então a checagem usa os sites de milhas que
 publicam a oferta minutos depois de ela abrir (Passageiro de Primeira ~15h02–
 15h15, Pontos pra Voar ~15h01–15h13):
 
-1. `/usr/bin/python3 scripts/azul_resgate.py` — lista os posts de HOJE sobre o
-   Meu Resgate Favorito nas duas fontes. "NADA" → encerrar sem enviar nada.
-2. Antes, tentar a página oficial com `scripts/navegar.py texto`; se abrir, ela
+1. O disparo começa às 14h57. PRIMEIRO de tudo (antes de reler regras,
+   histórico ou qualquer outra coisa), rodar
+   `/usr/bin/python3 scripts/azul_resgate.py --vigiar-ate 15:30` — ele checa as
+   duas fontes a cada 30 s (~5 s por rodada) e sai no primeiro post do dia.
+   "NADA" → encerrar sem enviar nada.
+   Achou → mandar NA HORA um aviso curto (antes de ler os posts):
+   `scripts/enviar_telegram.py --texto "*AZUL — MEU RESGATE FAVORITO NO AR!*
+
+   <título do post sem o nome do blog>
+
+   🔗 https://shopping.azulfidelidade.com.br/categoria/74654/meu-resgate-favorito"`
+   e só depois montar a mensagem completa (passos abaixo).
+2. Para a mensagem completa, tentar a página oficial com `scripts/navegar.py texto`; se abrir, ela
    é a fonte primária. Se não abrir, ler os posts encontrados (os dois, quando
    houver) e cruzar: cada produto, pontos, condições (Clube Azul / categoria,
    limite por CPF, poucas unidades). Divergência entre as fontes → usar o que
