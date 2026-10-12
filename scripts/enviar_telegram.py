@@ -1,11 +1,12 @@
-"""Envia o HTML do dia pro Telegram (Passo 7 das REGRAS).
+"""Envia as mensagens do dia pro Telegram (Passo 7 das REGRAS).
 
-Manda o arquivo como documento e, em seguida, cada mensagem do grupo como
-uma mensagem de texto separada (texto puro, pra copiar e colar no WhatsApp
-com os *negritos* intactos).
+Manda cada mensagem do grupo (os blocos msg-preview do HTML do dia) como uma
+mensagem de texto separada, em texto puro, pra copiar e colar no WhatsApp com
+os *negritos* intactos. O arquivo HTML em si não é enviado. Sem nenhuma
+oportunidade, manda só um aviso curto.
 
 Uso:
-  python scripts/enviar_telegram.py relatorios/AAAA-MM-DD.html [--legenda "texto"]
+  python scripts/enviar_telegram.py relatorios/AAAA-MM-DD.html
   python scripts/enviar_telegram.py --texto "mensagem avulsa"
 
 Precisa das variáveis de ambiente TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID.
@@ -46,7 +47,6 @@ def texto(msg):
 def main():
     a = argparse.ArgumentParser()
     a.add_argument("html", nargs="?")
-    a.add_argument("--legenda", default="")
     a.add_argument("--texto")
     args = a.parse_args()
     if not TOKEN or not CHAT:
@@ -60,16 +60,13 @@ def main():
     if erros:
         raise SystemExit("Não enviei: o HTML não passou na verificação.\n - " + "\n - ".join(erros))
 
-    caminho = Path(args.html)
-    n = len(p.mensagens)
-    legenda = args.legenda or (f"{n} oportunidade(s) nova(s) hoje" if n else "Nenhuma oportunidade nova começando hoje")
-    with caminho.open("rb") as f:
-        chamar("sendDocument", {"chat_id": CHAT, "caption": legenda[:1024]},
-               {"document": (caminho.name, f, "text/html")})
-    for msg in p.mensagens:
-        time.sleep(1)
+    if not p.mensagens:
+        texto("Nenhuma oportunidade nova começando hoje.")
+    for i, msg in enumerate(p.mensagens):
+        if i:
+            time.sleep(1)
         texto(msg)
-    print(f"Enviado: arquivo + {n} mensagem(ns).")
+    print(f"Enviado: {len(p.mensagens)} mensagem(ns).")
 
 
 if __name__ == "__main__":

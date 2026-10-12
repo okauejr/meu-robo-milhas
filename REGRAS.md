@@ -168,15 +168,18 @@ as frases banidas dentro de cada mensagem. Corrigir tudo até sair "OK".
 
 ## Passo 7 — Envio e atualização do histórico
 
-1. `python scripts/enviar_telegram.py relatorios/AAAA-MM-DD.html` — manda o
-   arquivo e cada mensagem separada (pra copiar e colar no WhatsApp).
+1. `python scripts/enviar_telegram.py relatorios/AAAA-MM-DD.html` — manda pro
+   Telegram SÓ as mensagens prontas, uma por oportunidade, cada uma como
+   mensagem individual (pra copiar e colar no WhatsApp). O arquivo HTML não é
+   enviado: ele fica no repositório como registro interno (rodapé, verificação).
+   Sem oportunidade nova, vai só o aviso "Nenhuma oportunidade nova começando hoje."
 2. Acrescentar uma entrada nova no topo de `historico.md` (sem apagar as
    anteriores) com loja/campanha, taxa e período de tudo que foi enviado.
 3. Commit e push do HTML e do histórico no branch de trabalho.
 
 Se depois do envio aparecer uma oportunidade que ficou de fora por engano,
 reabrir o MESMO arquivo do dia (nunca criar um segundo), adicionar o card,
-reenviar, e documentar a correção no histórico e — se revelar falha sistemática
+enviar só a mensagem nova, e documentar a correção no histórico e — se revelar falha sistemática
 no método — na seção abaixo.
 
 ## Execução automática (nuvem)

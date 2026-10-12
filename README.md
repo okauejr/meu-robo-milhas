@@ -2,8 +2,8 @@
 
 Rotina diária (dias úteis) que roda na nuvem do Claude Code, sem precisar de PC
 ligado: confere no navegador as oportunidades de pontuação Livelo que **começam
-hoje** (Clube Livelo + parceiros), monta um HTML com mensagens prontas pro grupo
-de WhatsApp e envia tudo pro Telegram.
+hoje** (Clube Livelo + parceiros), envia pro Telegram cada mensagem pronta pro grupo de
+WhatsApp, uma por oportunidade (o HTML do dia fica só como registro interno).
 
 - `REGRAS.md` — o passo a passo completo que a rotina segue
 - `historico.md` — tudo que já foi enviado (anti-duplicata)
@@ -11,7 +11,7 @@ de WhatsApp e envia tudo pro Telegram.
 - `modelo/dia.html` — modelo do HTML
 - `scripts/navegar.py` — navegação com Chromium (texto, links, carrossel, PDF)
 - `scripts/verificar.py` — verificação estrutural e de frases banidas
-- `scripts/enviar_telegram.py` — envia o arquivo e cada mensagem separada
+- `scripts/enviar_telegram.py` — envia cada mensagem separada (sem o arquivo)
 
 ## Configuração do ambiente na nuvem
 
