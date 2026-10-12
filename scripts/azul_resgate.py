@@ -68,6 +68,9 @@ def main():
     a.add_argument("--intervalo", type=int, default=30)
     args = a.parse_args()
     dia = args.data or datetime.now(BRT).strftime("%Y-%m-%d")
+    agora = datetime.now(BRT).strftime("%H:%M")
+    if not args.data and not args.vigiar_ate and "14:50" <= agora < "15:30":
+        args.vigiar_ate = "15:30"
 
     if args.vigiar_ate:
         h, m = map(int, args.vigiar_ate.split(":"))
