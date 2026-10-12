@@ -10,6 +10,9 @@ Uso:
       imprimindo texto/alt/link de cada slide visível.
   python scripts/navegar.py pdf URL
       Baixa um PDF (regulamento) e imprime o texto inteiro.
+  python scripts/navegar.py imagem URL --seletor SELETOR --saida arquivo.png
+      Salva o banner da promoção: baixa a imagem original se SELETOR for um
+      <img>, senão tira print só daquele elemento.
   python scripts/navegar.py js URL "expressão JS"
       Avalia uma expressão JS na página carregada e imprime o resultado (JSON).
 """
@@ -65,7 +68,7 @@ def abrir(p, url, esperar=None, rolar=False):
 
 def main():
     a = argparse.ArgumentParser()
-    a.add_argument("modo", choices=["texto", "links", "carrossel", "pdf", "js"])
+    a.add_argument("modo", choices=["texto", "links", "carrossel", "pdf", "js", "imagem"])
     a.add_argument("url")
     a.add_argument("expr", nargs="?")
     a.add_argument("--rolar", action="store_true")
@@ -76,6 +79,8 @@ def main():
     a.add_argument("--seta")
     a.add_argument("--max", type=int, default=60)
     a.add_argument("--png-dir")
+    a.add_argument("--seletor")
+    a.add_argument("--saida")
     args = a.parse_args()
 
     with sync_playwright() as p:
@@ -100,6 +105,22 @@ def main():
             for t, h in pg.evaluate("[...document.querySelectorAll('a[href]')].map(a => [a.innerText.trim(), a.href])"):
                 if args.filtro.lower() in (t + h).lower():
                     print(f"{t[:80]!r} -> {h}")
+        elif args.modo == "imagem":
+            if not (args.seletor and args.saida):
+                sys.exit("imagem precisa de --seletor e --saida")
+            el = pg.locator(args.seletor).first
+            el.scroll_into_view_if_needed()
+            src = el.evaluate("e => e.tagName === 'IMG' ? (e.currentSrc || e.src) : null")
+            try:
+                r = pg.request.get(src) if src else None
+            except Exception:
+                r = None
+            if r is not None and r.ok and r.headers.get("content-type", "").startswith("image/"):
+                with open(args.saida, "wb") as f:
+                    f.write(r.body())
+            else:
+                el.screenshot(path=args.saida)
+            print(f"salvo: {args.saida}")
         elif args.modo == "js":
             print(json.dumps(pg.evaluate(args.expr), ensure_ascii=False, indent=1))
         elif args.modo == "carrossel":

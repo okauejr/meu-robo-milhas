@@ -26,12 +26,15 @@ def sem_acento(texto):
 
 
 class Extrator(HTMLParser):
-    """Coleta o texto de cada div.msg-preview e conta tags de abertura/fechamento."""
+    """Coleta o texto de cada div.msg-preview (e o banner do card, se houver)
+    e conta tags de abertura/fechamento."""
 
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.abre, self.fecha = {}, {}
         self.mensagens, self._prof, self._buf = [], 0, None
+        self.imagens = []  # banner (img.banner) de cada mensagem, ou None
+        self._img = None
         self.tem_rodape = False
 
     def handle_starttag(self, tag, attrs):
@@ -39,6 +42,10 @@ class Extrator(HTMLParser):
         classes = (dict(attrs).get("class") or "").split()
         if tag == "footer" and "note" in classes:
             self.tem_rodape = True
+        if tag == "article":
+            self._img = None
+        if tag == "img" and "banner" in classes:
+            self._img = dict(attrs).get("src")
         if self._buf is not None:
             if tag == "br":
                 self._buf.append("\n")
@@ -52,6 +59,7 @@ class Extrator(HTMLParser):
         if self._buf is not None and tag == "div":
             if self._prof == 0:
                 self.mensagens.append("".join(self._buf).strip())
+                self.imagens.append(self._img)
                 self._buf = None
             else:
                 self._prof -= 1
@@ -91,6 +99,10 @@ def verificar(caminho):
         dia = datetime(*map(int, data.groups()))
         if dia.strftime("%d/%m/%Y") not in html:
             erros.append(f"a data {dia:%d/%m/%Y} não aparece no arquivo (cabeçalho desatualizado?)")
+
+    for i, img in enumerate(p.imagens, 1):
+        if img and not (Path(caminho).parent / img).is_file():
+            erros.append(f"card #{i}: imagem do banner não encontrada ({img})")
 
     for i, msg in enumerate(p.mensagens, 1):
         normal = sem_acento(msg)

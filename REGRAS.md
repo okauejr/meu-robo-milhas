@@ -146,6 +146,21 @@ passa insegurança sobre uma oportunidade real. Esse tipo de nota fica só no
 rodapé. Dentro do card, no máximo uma frase curta e neutra tipo "Preço de
 vitrine (sem cupom)", sem explicar o motivo.
 
+### Foto da promoção (antes da mensagem)
+
+Em campanhas que NÃO são de compra em parceiro — adesão/upgrade de Clube
+(Livelo ou Esfera), compra de pontos, transferência bonificada e afins — a
+mensagem vai precedida da imagem oficial da promoção (o banner da campanha):
+
+1. Salvar o banner com `scripts/navegar.py imagem URL --seletor ... --saida
+   relatorios/img/AAAA-MM-DD-nome.png` (de preferência a imagem original do
+   banner da página da campanha ou do carrossel; senão, print só do banner).
+   Conferir abrindo o arquivo que é mesmo o banner certo, sem cortes.
+2. Colocar no card `<img class="banner" src="img/AAAA-MM-DD-nome.png">`.
+3. O `enviar_telegram.py` manda a foto e, logo em seguida, a mensagem.
+
+Ofertas de compra em parceiros/lojas vão só com a mensagem, sem foto.
+
 ### Template de mensagem de parceiro
 
 Título e nome de cupom em negrito (asteriscos do WhatsApp), linha em branco entre seções:

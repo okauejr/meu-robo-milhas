@@ -2,7 +2,8 @@
 
 Manda cada mensagem do grupo (os blocos msg-preview do HTML do dia) como uma
 mensagem de texto separada, em texto puro, pra copiar e colar no WhatsApp com
-os *negritos* intactos. O arquivo HTML em si não é enviado. Sem nenhuma
+os *negritos* intactos. Se o card tiver banner (<img class="banner">), a foto
+vai logo antes da mensagem. O arquivo HTML em si não é enviado. Sem nenhuma
 oportunidade, manda só um aviso curto (ou nada, com --silencioso).
 
 Mensagens já enviadas ficam registradas em relatorios/AAAA-MM-DD.enviados.json
@@ -50,10 +51,16 @@ def texto(msg):
     chamar("sendMessage", {"chat_id": CHAT, "text": msg, "disable_web_page_preview": "true"})
 
 
+def foto(caminho):
+    with open(caminho, "rb") as f:
+        chamar("sendPhoto", {"chat_id": CHAT}, {"photo": (Path(caminho).name, f)})
+
+
 def main():
     a = argparse.ArgumentParser()
     a.add_argument("html", nargs="?")
     a.add_argument("--texto")
+    a.add_argument("--foto", help="com --texto: manda essa imagem antes do texto")
     a.add_argument("--silencioso", action="store_true",
                    help="sem mensagem nova, não manda nada (checagens extras)")
     args = a.parse_args()
@@ -61,6 +68,8 @@ def main():
         raise SystemExit("Defina TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID nas variáveis do ambiente.")
 
     if args.texto:
+        if args.foto:
+            foto(args.foto)
         texto(args.texto)
         return
 
@@ -70,7 +79,9 @@ def main():
 
     registro = Path(args.html).with_suffix(".enviados.json")
     enviados = json.loads(registro.read_text(encoding="utf-8")) if registro.exists() else []
-    novas = [m for m in p.mensagens if hashlib.sha1(m.encode()).hexdigest() not in enviados]
+    pasta = Path(args.html).parent
+    novas = [(m, img) for m, img in zip(p.mensagens, p.imagens)
+             if hashlib.sha1(m.encode()).hexdigest() not in enviados]
 
     if not novas:
         if not args.silencioso and not enviados:
@@ -79,9 +90,11 @@ def main():
             registro.write_text(json.dumps(enviados, indent=1), encoding="utf-8")
         print("Nada novo para enviar.")
         return
-    for i, msg in enumerate(novas):
+    for i, (msg, img) in enumerate(novas):
         if i:
             time.sleep(1)
+        if img:
+            foto(pasta / img)
         texto(msg)
         enviados.append(hashlib.sha1(msg.encode()).hexdigest())
         registro.write_text(json.dumps(enviados, indent=1), encoding="utf-8")

@@ -18,6 +18,7 @@
   .badge { font-size:12px; padding:2px 8px; border-radius:999px; border:1px solid var(--line); color:var(--muted); }
   .badge.validade { border-color:var(--ok); color:var(--ok); }
   .card h2 { font-size:18px; margin:4px 0; }
+  .banner { display:block; width:100%; height:auto; border-radius:10px; margin:6px 0 8px; }
   .pontos { font-size:34px; font-weight:800; color:var(--accent); margin:4px 0 10px; }
   .fatos { display:grid; grid-template-columns:max-content 1fr; gap:4px 12px; margin:0 0 10px; font-size:14px; }
   .fatos dt { color:var(--muted); }
@@ -44,6 +45,8 @@
     <span class="badge">Conferido na página do parceiro (Livelo + Esfera)</span>
     <span class="badge validade">Válido hoje, DD/MM</span>
   </div>
+  <!-- Só em campanhas que NÃO são de compra em parceiro (Clube, upgrade, compra de pontos, transferência): -->
+  <!-- <img class="banner" src="img/AAAA-MM-DD-nome.png" alt="Banner da promoção"> -->
   <h2>NOME DA LOJA</h2>
   <div class="pontos">até X pts/R$</div>
   <dl class="fatos">
