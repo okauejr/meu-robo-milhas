@@ -51,6 +51,24 @@ do milheiro por modalidade (total pago em 12 meses ÷ pontos em 12 meses) e
 aplicar descontos em cascata. Mensagem no template de Clube, com título
 `*CLUBE ESFERA: BENEFÍCIO*`.
 
+**Modalidades de pagamento (Clube Livelo e Clube Esfera) — conferir SEMPRE as
+três:** mensal, anual parcelado (12x) e anual à vista. Cada uma tem preço
+próprio e a promoção pode valer para todas ou só para algumas. Para cada
+campanha de Clube:
+
+1. Abrir a vitrine do Clube e alternar entre todas as opções de pagamento
+   (abas/seletor "Mensal" / "Anual", modal "Escolha o tipo de assinatura",
+   botões de cada plano) até ver o preço de cada modalidade. Não aceitar um FAQ
+   ou texto genérico ("anual indisponível") como prova: só concluir que uma
+   modalidade não existe depois de procurar na vitrine e no regulamento.
+2. Ler no regulamento/termos para quais modalidades o bônus vale.
+3. Montar uma 🎟️ OPÇÃO por plano e, dentro dela, o 💰 Investimento e o
+   🔥 Preço do milheiro de CADA modalidade elegível (total pago em 12 meses ÷
+   pontos em 12 meses daquela modalidade). Se o bônus só vale para algumas
+   modalidades, dizer isso de forma neutra no ⚠️ Importante
+   (ex.: "Bônus válido só na assinatura mensal").
+
+
 ## Passo 2 — Levantamento de candidatas de parceiro
 
 Cinco canais, todos obrigatórios e no mesmo nível de prioridade:
@@ -249,4 +267,7 @@ então essa checagem ainda não roda.
 
 ## Correções de método
 
-(nenhuma ainda)
+- 12/10/2026 — Clube Esfera enviado só com o preço mensal porque o FAQ dizia
+  "anual indisponível". Regra nova: conferir sempre mensal, anual parcelado e
+  anual à vista na vitrine e no regulamento (ver "Modalidades de pagamento"
+  no Passo 1B; vale também para o Clube Livelo).
