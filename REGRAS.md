@@ -7,7 +7,8 @@ um envio) são registradas na seção **Correções de método** no fim deste ar
 ## Objetivo
 
 Todo dia útil, montar um arquivo HTML único com as oportunidades NOVAS de
-pontuação Livelo (campanhas de Clube Livelo e ofertas de parceiros/lojas) cujo
+pontuação **Livelo e Esfera** (campanhas de Clube Livelo / Clube Esfera e
+ofertas de parceiros/lojas nos dois programas) cujo
 período de validade **começa naquele dia específico**, verificadas diretamente
 no navegador (não por busca/texto), e preparar mensagens prontas para copiar e
 colar no grupo de WhatsApp. O resultado é enviado pro Telegram.
@@ -40,9 +41,19 @@ da tabela).
 - Cupom + desconto por forma de pagamento (ex. Pix): aplicar em cascata
   (multiplicando), nunca somando os percentuais.
 
+## Passo 1B — Checagem do Clube Esfera (sempre, mesmo sem novidade)
+
+Mesma lógica do Passo 1, aplicada ao Clube Esfera (esfera.com.vc — páginas do
+Clube Esfera, banners e regulamentos/termos da campanha): campanhas de
+assinatura, upgrade ou bônus de Clube cujo período COMEÇA hoje. Ler o
+regulamento/termos inteiro, usar preço de vitrine sem login, calcular o preço
+do milheiro por modalidade (total pago em 12 meses ÷ pontos em 12 meses) e
+aplicar descontos em cascata. Mensagem no template de Clube, com título
+`*CLUBE ESFERA: BENEFÍCIO*`.
+
 ## Passo 2 — Levantamento de candidatas de parceiro
 
-Quatro canais, todos obrigatórios e no mesmo nível de prioridade:
+Cinco canais, todos obrigatórios e no mesmo nível de prioridade:
 
 1. Filtro Ofertas/Maior pontuação da própria Livelo
 2. Busca por loja na Esfera
@@ -52,10 +63,13 @@ Quatro canais, todos obrigatórios e no mesmo nível de prioridade:
    abaixo da imagem — nunca clicar na própria imagem, que é um link pra página do
    parceiro) até o carrossel repetir o primeiro slide. O número de bolinhas
    indicadoras não é confiável como contagem. (`scripts/navegar.py carrossel` faz isso.)
+5. Ofertas de parceiros da própria Esfera (página de lojas parceiras / junte
+   pontos, banners e selos de bônus da Esfera) — oportunidade de juntar pontos
+   Esfera vale por si só, mesmo que a Livelo não tenha nada para a loja.
 
 ## Passo 3 — Verificação individual de cada candidata
 
-Pra cada loja levantada por qualquer um dos 4 canais, entrar na página específica
+Pra cada loja levantada por qualquer um dos canais, entrar na página específica
 do parceiro (não só no card da listagem) nas DUAS plataformas (Livelo e Esfera) e
 confirmar: a régua completa de pontos por tier (assinante Clube / sem Clube /
 categoria restrita), a validade exata ("Campanha válida de X a Y" ou "Campanha
@@ -198,6 +212,11 @@ no método — na seção abaixo.
 ## Notas de navegação
 
 (seletores e caminhos que funcionaram — atualizado pela própria rotina)
+
+- Usar `/usr/bin/python3` (o `python` do PATH pode não enxergar o playwright instalado).
+- Cards da listagem de parceiros Livelo: `a[data-testid=a_PartnerCard_card_link]` (via `js`, após rolar); filtrar por "Promo|Era". Página do parceiro: texto "Campanha válida de X a Y" + "Termina em ...".
+- Carrossel Livelo: `--container "div.swiper.css-1mcxol9" --seta "button.button-next"` (3 slides em 12/10; classes css-* podem mudar).
+- Esfera: digitar a loja no input da página junte-pontos/esf02163 e ler o texto depois de "Todas as categorias".
 
 ## Correções de método
 

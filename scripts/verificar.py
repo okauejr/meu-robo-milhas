@@ -15,7 +15,7 @@ FRASES_BANIDAS = [
     r"\bbug", "erro no site", "erro na pagina", "nao foi possivel", "nao consegui",
     "regulamento", "link quebrado", "quebrado", "taxa padrao", "taxa normal",
     "dia normal", "dias normais", "normalmente", "inconsistente", "divergen",
-    "esfera", "compare ?mania", "sem login", "ticker", "carrossel",
+    "compare ?mania", "sem login", "ticker", "carrossel",
 ]
 RESTOS_DE_MODELO = ["{{", "}}", "NOME DA LOJA", "DD/MM", "X pts", "https://..."]
 LIMITE_TELEGRAM = 4096
