@@ -6,6 +6,33 @@ nunca apagar entradas antigas. Formato de cada linha:
 
 <!-- NOVAS ENTRADAS ABAIXO DESTA LINHA -->
 
+## 13/10/2026
+- Livelo — Under Armour — 12 pts/R$1 acima de R$400; 6 demais — 13/10 a 14/10 — cupom LIVELO
+- Livelo — Tia Sônia — 14 Clube / 5 demais — 13/10 a 15/10 — cupom LIVELO
+- Livelo — Hope — 13 Clube / 8 demais — 13/10 a 14/10 — cupom LIVELO
+- Livelo — Posthaus — 10 1ª compra / 1 demais — 13/10 a 15/10 — cupom LIVELO
+- Livelo — Beleza na Web — 10 Clube / 8 demais (marcas Boticário, Eudora, Truss, QDB, OUI, Vult); 2 resto — 13/10
+- Livelo — O Boticário — 10 vale-presente / 3 demais — 13/10
+- Livelo — Coffee++ — 9 Clube / 4 demais — 13/10 a 16/10 — cupom LIVELO
+- Livelo — Renner — 8 básicos / 2 demais — 13/10 a 14/10
+- Livelo — Decolar — 8 Clube / 7 demais por US$ hotéis Europa; 6 demais produtos; 4 voos — 13/10 a 19/10
+- Livelo — Sephora — 7 — 13/10 a 14/10 — cupom LIVELO
+- Livelo — Beep Saúde — 7 Clube / 5 demais — 13/10 a 14/10
+- Livelo — O.U.i Paris — 7 Clube / 4 demais — 13/10 a 14/10
+- Livelo — Eudora — 6 Clube / 2 demais — 13/10 a 14/10
+- Livelo — Truss — 6 Clube / 4 demais — 13/10 a 14/10
+- Livelo — C&A — 6 básicos e jeans / 2 demais — 13/10 a 15/10
+- Livelo — New Balance — 6 — 13/10 — cupom LIVELO
+- Livelo — Carrefour Mercado — 5 — 13/10 — cupom LIVELO
+- Livelo — Fast Shop — 5 selecionados / 2 demais / 1 marketplace — 13/10 a 15/10 — cupom LIVELO
+- Livelo — Insider — 5 Clube / 3 demais — 13/10 a 14/10 — cupom LIVELO
+- Livelo — Sam's Club — 3 — 13/10 a 14/10 — cupom LIVELO
+- Esfera — Camicado — 8 — 13/10 a 15/10
+- Esfera — Polishop — 8 — 13/10 a 19/10 — sem ofertas com cashback
+- Esfera — Insider — 8 — 13/10 a 14/10 — cupom ESFERA
+- Esfera — Beleza na Web — 6 — 13/10 a 16/10
+- Fora: Ciclic viagem/celular, Petlove Saúde (nicho); Unidas Livelo 12 pts 13–14/10 e Esfera 10 pts 13–15/10 (aluguel de carro, regra de nicho); American Tourister (banner sem validade na página). Clube Livelo: nada novo. Clube Esfera: campanha de 12/10 segue (já enviada).
+
 ## 12/10/2026
 - Mercado Livre — 2 pts/R$1 Saúde & Esporte; 1 pt a cada R$2 demais — 12/10 a 18/10 — exceto Alimentos e Bebidas
 - Petlove (marca MEAU) — 6 pts/R$1 MEAU; 2 pts demais — 12/10 a 13/10 — exceto rePet/recorrência/assinantes

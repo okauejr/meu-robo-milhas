@@ -334,6 +334,7 @@ https://shopping.azulfidelidade.com.br/categoria/74654/meu-resgate-favorito
 (seletores e caminhos que funcionaram — atualizado pela própria rotina)
 
 - Usar `/usr/bin/python3` (o `python` do PATH pode não enxergar o playwright instalado).
+- Livelo — validade de todas as promoções de uma vez: abrir cada link da listagem com selo "Promo" em páginas paralelas (playwright async, 6 por vez) e extrair a linha "Campanha válida..." + "Termina em" + a linha após "Prazo" (prazo de crédito). Em 13/10 levou ~1 min para 41 parceiros. Atenção: algumas páginas escrevem "Campanha de X a Y" (sem "válida") ou "Válido de".
 - Cards da listagem de parceiros Livelo: `a[data-testid=a_PartnerCard_card_link]` (via `js`, após rolar); filtrar por "Promo|Era". Página do parceiro: texto "Campanha válida de X a Y" + "Termina em ...".
 - Carrossel da HOME da Livelo: mesmo container/seta, mas um pop-up (`[id^=web_modal]`) cobre a seta e o `carrossel` trava; remover antes de cada clique (`document.querySelectorAll('[id^=web_modal]').forEach(e=>e.remove())`). Em 12/10 eram 6 slides.
 - Carrossel Livelo: `--container "div.swiper.css-1mcxol9" --seta "button.button-next"` (3 slides em 12/10; classes css-* podem mudar).
