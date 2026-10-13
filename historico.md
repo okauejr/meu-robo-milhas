@@ -31,6 +31,7 @@ nunca apagar entradas antigas. Formato de cada linha:
 - Esfera — Polishop — 8 — 13/10 a 19/10 — sem ofertas com cashback
 - Esfera — Insider — 8 — 13/10 a 14/10 — cupom ESFERA
 - Esfera — Beleza na Web — 6 — 13/10 a 16/10
+- 18h — Livelo: American Tourister — 6 pts/R$1 — 13/10 a 14/10 — cupom LIVELO (de manhã a página não mostrava a campanha). Regulamentos e carrosséis sem mais nada novo.
 - Fora: Ciclic viagem/celular, Petlove Saúde (nicho); Unidas Livelo 12 pts 13–14/10 e Esfera 10 pts 13–15/10 (aluguel de carro, regra de nicho); American Tourister (banner sem validade na página). Clube Livelo: nada novo. Clube Esfera: campanha de 12/10 segue (já enviada).
 
 ## 12/10/2026
