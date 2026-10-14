@@ -20,6 +20,7 @@ nunca apagar entradas antigas. Formato de cada linha:
 - Esfera — Mistral — Clube Esfera até 11 em vinhos selecionados, 3 resto — 14/10 a 15/10 (página diz 12 nas regras; enviado "até 11")
 - Azul — Magalu — Informática/Tablets 15 Clube Azul / 8 demais; demais categorias 13 / 7 (exceto Telefonia e Mercado) — 13/10 a 16/10 — link clube.magazineluiza.com.br/tudoazul (pedido do dono; site da Azul bloqueado, regras de Passageiro de Primeira + Melhores Cartões). 
 - Azul — Natura — 20 Clube Azul / 15 demais — 13/10 a 15/10 — link natura.com.br/parceiros-azul, cupom PONTOSAZUL, teto R$ 5.000/pedido (pedido do dono)
+- 18h — Livelo: nada novo. Regulamentos iguais; carrossel de parceiros (12 slides) igual ao da manhã; home (15 slides) com banner novo de 40% de bônus na transferência para Etihad Guest, mas a campanha vale de 02/10 a 31/10 (Passageiro de Primeira, 02/10) — fora por não começar hoje. Demais slides: descontos/resgates (Suíça/Canadá 15% OFF, Tramontina, Decolar, +30% Pontos Viram Dinheiro). 15h — Azul: Meu Resgate Favorito não apareceu (NADA às 15h30 e 15h40).
 - Fora: nicho (seguros, Petlove Saúde, consórcios, Ourocap, Unidas); Calvin Klein (Compare Mania, não é parceira Livelo/Esfera). Clube Livelo e Clube Esfera: nada novo.
 
 ## 13/10/2026
