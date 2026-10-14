@@ -95,6 +95,17 @@ Cinco canais, todos obrigatórios e no mesmo nível de prioridade:
 5. Ofertas de parceiros da própria Esfera (página de lojas parceiras / junte
    pontos, banners e selos de bônus da Esfera) — oportunidade de juntar pontos
    Esfera vale por si só, mesmo que a Livelo não tenha nada para a loja.
+6. Parceiros da Azul Fidelidade (voeazul.com.br/br/pt/programa-fidelidade/parceiros
+   e voeazul.com.br/br/pt/ofertas/pontos). A listagem mostra sempre a taxa
+   padrão (ex.: "R$ 1 = 1 pontos Azul"), então a promoção só aparece abrindo o
+   link/regulamento de cada parceiro. Os sites da Azul recusam acesso vindo da
+   nuvem (403), então: (a) procurar posts do dia nos sites de milhas (feeds
+   RSS do Passageiro de Primeira e do Melhores Cartões, busca "azul fidelidade"),
+   (b) cruzar as duas fontes (pontos por tier Clube Azul / demais, categorias
+   excluídas, validade, prazo de crédito) e (c) abrir o link direto da loja na
+   parceria (ex. Magalu: https://clube.magazineluiza.com.br/tudoazul) para
+   confirmar que a campanha está no ar. A mensagem usa SEMPRE o link direto da
+   loja na parceria, nunca o post do blog. Título: `*LOJA (AZUL): BENEFÍCIO*`.
 
 ## Passo 3 — Verificação individual de cada candidata
 
@@ -339,6 +350,7 @@ https://shopping.azulfidelidade.com.br/categoria/74654/meu-resgate-favorito
 - Carrossel da HOME da Livelo: mesmo container/seta, mas um pop-up (`[id^=web_modal]`) cobre a seta e o `carrossel` trava; remover antes de cada clique (`document.querySelectorAll('[id^=web_modal]').forEach(e=>e.remove())`). Em 12/10 eram 6 slides.
 - Carrossel Livelo: `--container "div.swiper.css-1mcxol9" --seta "button.button-next"` (3 slides em 12/10; classes css-* podem mudar).
 - Compare Mania: no texto da home cada item vem como 3 linhas: NOME / variação (+N% verde, -N% vermelho) / taxa. Filtrar variação "+" com taxa em "pt/$" (pontos; "%" é cashback). Lojas que não aparecem na Livelo nem na Esfera são de outro programa.
+- Azul: voeazul.com.br / azulfidelidade.com.br dão 403 (Akamai) e magazineluiza.com.br também, mas clube.magazineluiza.com.br/tudoazul abre e mostra "Ganhe X pontos" por produto (pontuação base; o extra do Clube Azul cai depois). Links diretos das lojas aparecem nos posts do Melhores Cartões (feed `?s=azul+LOJA&feed=rss2`, procurar href com o domínio da loja).
 - Esfera: digitar a loja no input da página junte-pontos/esf02163 e ler o texto depois de "Todas as categorias".
 - Esfera — fonte mais rápida: artigo diário "Campanhas - DD/MM/AAAA" em esfera.zendesk.com/hc/pt-br/sections/52066838928275 (via `links`). Traz a tabela de parceiros com Data início/fim e os termos de campanhas do Clube; filtrar "Data início" = hoje e comparar com o artigo da véspera. Depois conferir cada um na página do parceiro.
 - Esfera — página de parceiro: links `/p/<loja>/<id>` (ex. decolar/e000100402, hoteiscom/e000100148); com `links --rolar` em junte-pontos/esf02163 os cards mostram "Ganhe X pts a cada real". Validade em "Condições válidas para compras efetuadas de ... até ...".
