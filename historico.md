@@ -6,6 +6,20 @@ nunca apagar entradas antigas. Formato de cada linha:
 
 <!-- NOVAS ENTRADAS ABAIXO DESTA LINHA -->
 
+## 14/10/2026
+- Livelo — Loja do Mecânico — 10 Clube / 4 demais — 14/10
+- Livelo — Carrefour Mercado — 8 drogarias / 1 demais — 14/10
+- Livelo — Beleza na Web — 8 Dermotivin, Cetaphil, Alastin / 2 demais — 14/10 a 15/10
+- Livelo — Angeloni — 6 Clube / 4 demais em selecionados; 1 resto — 14/10 a 19/10 — cupom LIVELO
+- Livelo — Carter's — 5 — 14/10 a 16/10 — cupom LIVELO
+- Livelo — Riachuelo — 5 (vendidos e entregues, exceto eletrônicos/eletroportáteis/beleza) — 14/10 a 16/10 — cupom LIVELO
+- Livelo — OLX — 5 1ª compra / 1 demais — 14/10 a 16/10 — Garantia + Entrega OLX
+- Livelo — Hoteis.com — 4 — 14/10 a 18/10 — cupom LIVELO4X, check-out até 28/02/2027
+- Livelo — Quem Disse, Berenice? — 4 Clube / 3 demais — 14/10 a 19/10
+- Esfera — Coffee++ — 12 em cápsulas — 14/10 a 16/10 — cupom ESFERA
+- Esfera — Mistral — Clube Esfera até 11 em vinhos selecionados, 3 resto — 14/10 a 15/10 (página diz 12 nas regras; enviado "até 11")
+- Fora: nicho (seguros, Petlove Saúde, consórcios, Ourocap, Unidas); Calvin Klein (Compare Mania, não é parceira Livelo/Esfera). Clube Livelo e Clube Esfera: nada novo.
+
 ## 13/10/2026
 - Livelo — Under Armour — 12 pts/R$1 acima de R$400; 6 demais — 13/10 a 14/10 — cupom LIVELO
 - Livelo — Tia Sônia — 14 Clube / 5 demais — 13/10 a 15/10 — cupom LIVELO
