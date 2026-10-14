@@ -103,7 +103,7 @@ Cinco canais, todos obrigatórios e no mesmo nível de prioridade:
    RSS do Passageiro de Primeira e do Melhores Cartões, busca "azul fidelidade"),
    (b) cruzar as duas fontes (pontos por tier Clube Azul / demais, categorias
    excluídas, validade, prazo de crédito) e (c) abrir o link direto da loja na
-   parceria (ex. Magalu: https://clube.magazineluiza.com.br/tudoazul) para
+   parceria (ex. Magalu: https://clube.magazineluiza.com.br/tudoazul; Natura: https://www.natura.com.br/parceiros-azul, que traz o regulamento oficial no rodapé — quando a página da loja tem o texto oficial, ele vale mais que os blogs) para
    confirmar que a campanha está no ar. A mensagem usa SEMPRE o link direto da
    loja na parceria, nunca o post do blog. Título: `*LOJA (AZUL): BENEFÍCIO*`.
 

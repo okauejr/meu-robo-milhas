@@ -18,7 +18,8 @@ nunca apagar entradas antigas. Formato de cada linha:
 - Livelo — Quem Disse, Berenice? — 4 Clube / 3 demais — 14/10 a 19/10
 - Esfera — Coffee++ — 12 em cápsulas — 14/10 a 16/10 — cupom ESFERA
 - Esfera — Mistral — Clube Esfera até 11 em vinhos selecionados, 3 resto — 14/10 a 15/10 (página diz 12 nas regras; enviado "até 11")
-- Azul — Magalu — Informática/Tablets 15 Clube Azul / 8 demais; demais categorias 13 / 7 (exceto Telefonia e Mercado) — 13/10 a 16/10 — link clube.magazineluiza.com.br/tudoazul (pedido do dono; site da Azul bloqueado, regras de Passageiro de Primeira + Melhores Cartões). Não enviada: Natura Azul 20/14 até 15/10.
+- Azul — Magalu — Informática/Tablets 15 Clube Azul / 8 demais; demais categorias 13 / 7 (exceto Telefonia e Mercado) — 13/10 a 16/10 — link clube.magazineluiza.com.br/tudoazul (pedido do dono; site da Azul bloqueado, regras de Passageiro de Primeira + Melhores Cartões). 
+- Azul — Natura — 20 Clube Azul / 15 demais — 13/10 a 15/10 — link natura.com.br/parceiros-azul, cupom PONTOSAZUL, teto R$ 5.000/pedido (pedido do dono)
 - Fora: nicho (seguros, Petlove Saúde, consórcios, Ourocap, Unidas); Calvin Klein (Compare Mania, não é parceira Livelo/Esfera). Clube Livelo e Clube Esfera: nada novo.
 
 ## 13/10/2026
