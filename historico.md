@@ -27,7 +27,7 @@ nunca apagar entradas antigas. Formato de cada linha:
 - Livelo — Renner — 3 / 2 — 15/10 a 17/10
 - Esfera — Natura 10 (cupom ESFERA) 15–17/10; L'Occitane au Brésil 5 e en Provence 5 15–25/10; Fast Shop até 5 (cupom ESFERA) 15–18/10; Vivara 4 15–18/10; Farm Rio 2 15–19/10
 - Transferência — C6 Bank → LATAM Pass — 25% + 1.000 milhas na 1ª transferência, cadastro obrigatório, limite 300 mil/CPF — link latampass.latam.com/pt_br/promocao/c6-milhas-extras [TRANSF início=14/10 fim=16/10] (enviada em 15/10 com banner; reenviar ACABA HOJE em 16/10)
-- Transferência — Sicredi → Azul — 70% Clube Azul / 40% demais / até +30% por tempo de Clube, cadastro obrigatório, cupom SICREDI15 — link voeazul.com.br/br/pt/ofertas/sicredi [TRANSF início=13/10 fim=15/10] (enviada como ACABA HOJE em 15/10 com banner)
+- Transferência — Sicredi → Azul — 70% Clube Azul / 40% demais / até +30% por tempo de Clube, cadastro obrigatório, cupom SICREDI15 — link voeazul.com.br/br/pt/ofertas/sicredi [TRANSF início=13/10 fim=15/10] (enviada como ACABA HOJE em 15/10 com banner; reenviada no mesmo dia no template novo da Azul a pedido do dono)
 - Fora: Movida (aluguel de carro) e Suhai (seguro). Azul: sem post novo de parceiro. Clube Livelo e Clube Esfera: nada novo.
 
 ## 14/10/2026
