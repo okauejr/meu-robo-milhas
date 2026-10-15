@@ -30,6 +30,7 @@ nunca apagar entradas antigas. Formato de cada linha:
 - Transferência — Sicredi → Azul — 70% Clube Azul / 40% demais / até +30% por tempo de Clube, cadastro obrigatório, cupom SICREDI15 — link voeazul.com.br/br/pt/ofertas/sicredi [TRANSF início=13/10 fim=15/10] (enviada como ACABA HOJE em 15/10 com banner; reenviada no mesmo dia no template novo da Azul a pedido do dono)
 - Transferência — Missão LATAM Pass (só convidados, qualquer banco parceiro) — 25%, ativar no app e transferir em até 2 dias, 1 transação/CPF, limite 300 mil — termos T_C__MISSA_O_13-19OUT.pdf [TRANSF início=13/10 fim=19/10] (enviada em 15/10 a pedido do dono, com capturas do app)
 - Fora: Movida (aluguel de carro) e Suhai (seguro). Azul: sem post novo de parceiro. Clube Livelo e Clube Esfera: nada novo.
+- 18h — Livelo: nenhum parceiro novo. Regulamentos ativos iguais aos de ontem; carrossel de parceiros (10 slides) sem campanha nova (Centauro, Hering, Riachuelo, C&A, Boticário, OLX, Carrefour Shopping já registrados). Home com banners novos do "Dia do Shopping Livelo" (só hoje, até 23h59, compras pagas em dinheiro no Shopping Livelo: Natura 10 Clube / 5 demais, Época 7, Webcontinental 7, KaBuM! 4, Crocs 12/8, 3 Corações 6, seleção até 13). Shopping Livelo não é canal da rotina, então não enviei e perguntei ao dono. 15h — Azul: Meu Resgate Favorito não apareceu (NADA às 15h30 e 15h40).
 
 ## 14/10/2026
 - Livelo — Loja do Mecânico — 10 Clube / 4 demais — 14/10
