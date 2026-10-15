@@ -82,7 +82,7 @@ campanha de Clube:
 
 ## Passo 2 — Levantamento de candidatas de parceiro
 
-Cinco canais, todos obrigatórios e no mesmo nível de prioridade:
+Sete canais, todos obrigatórios e no mesmo nível de prioridade:
 
 1. Filtro Ofertas/Maior pontuação da própria Livelo
 2. Busca por loja na Esfera
@@ -106,6 +106,58 @@ Cinco canais, todos obrigatórios e no mesmo nível de prioridade:
    parceria (ex. Magalu: https://clube.magazineluiza.com.br/tudoazul; Natura: https://www.natura.com.br/parceiros-azul, que traz o regulamento oficial no rodapé — quando a página da loja tem o texto oficial, ele vale mais que os blogs) para
    confirmar que a campanha está no ar. A mensagem usa SEMPRE o link direto da
    loja na parceria, nunca o post do blog. Título: `*LOJA (AZUL): BENEFÍCIO*`.
+
+7. Transferências bonificadas entre parceiros para a LATAM Pass e a Azul
+   Fidelidade (qualquer parceiro de origem: bancos, cartões, hotéis, Livelo,
+   Esfera…). Ver "Transferências bonificadas" abaixo.
+
+### Transferências bonificadas (LATAM Pass e Azul)
+
+Fontes: promoções da LATAM Pass (https://latampass.latam.com/br/pt, páginas
+`/pt_br/promocao/<parceiro>-milhas-extras`) e ofertas da Azul
+(https://www.voeazul.com.br/br/pt/ofertas/<parceiro>, ex. `/ofertas/sicredi`).
+Os dois sites dão 403 a partir da nuvem, então: procurar nos feeds RSS dos
+sites de milhas (Passageiro de Primeira, Melhores Cartões, Melhores Destinos;
+buscas "latam+pass+bonus", "transferencia+bonus", "azul+fidelidade" e o feed
+geral `/feed/`) os posts de bônus em transferência, ler o post inteiro e pegar
+nele o link oficial da campanha (o link vai na mensagem SEM os parâmetros utm).
+
+1. Banner: SEMPRE vai antes da mensagem (foto da promoção). Usar o banner
+   oficial: a LATAM hospeda os dela em
+   `latam-b75-prod.adobecqms.net/content/dam/effp/web-latampass/pt_br/banners/campaigns/...`
+   (esse servidor abre da nuvem; o nome da pasta costuma trazer as datas, ex.
+   `c6-14-al-1610`), e os posts trazem a URL na tag img. Para a Azul, usar a
+   imagem de cabeçalho oficial da oferta (ex. arquivo `bnr-header-<parceiro>`)
+   e conferir que não tem marca de blog. Salvar em `relatorios/img/AAAA-MM-DD-<programa>-<parceiro>.ext`
+   e abrir o arquivo para conferir.
+2. Datas: o texto do banner oficial ("Promoção válida de X a Y") vale mais que
+   o post. Cruzar com um segundo site quando houver.
+3. Enviar no dia em que a promoção COMEÇA e reenviar no ÚLTIMO dia com o título
+   começando por `ACABA HOJE — ` (mesmo banner antes). Promoção de um dia só
+   não tem reenvio. Registrar no `historico.md` com a marca
+   `[TRANSF início=DD/MM fim=DD/MM]`; todo disparo diário procura no histórico
+   as transferências com `fim=` igual a hoje e manda o "ACABA HOJE" (se o
+   início também for hoje, não reenvia).
+4. Template (negritos do WhatsApp como no exemplo):
+
+```
+*ORIGEM → DESTINO: X% DE BÔNUS (+ extras)*
+
+📈 *Bonificação*
+• *X% de bônus* sobre os pontos transferidos da ORIGEM para o DESTINO
+• extras / tiers (Clube, categoria, primeira transferência)
+
+📅 *Validade*
+• De *DD/MM/AAAA* até *DD/MM/AAAA às 23h59*
+
+⚠️ *Importante*
+• cadastro obrigatório antes de transferir (se houver)
+• limites por CPF, prazo de crédito e validade dos pontos bônus
+• não cumulatividade, titularidade, cupons extras
+
+🔗 Acesse:
+link oficial da campanha
+```
 
 ## Passo 3 — Verificação individual de cada candidata
 
