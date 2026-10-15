@@ -6,6 +6,28 @@ nunca apagar entradas antigas. Formato de cada linha:
 
 <!-- NOVAS ENTRADAS ABAIXO DESTA LINHA -->
 
+## 15/10/2026
+- Livelo — Centauro — 15 Clube / 11 demais em selecionados; 2 resto — 15/10
+- Livelo — Insider — 15 Clube / 12 demais — 15/10 — cupom LIVELO
+- Livelo — Porto Serviço — 15 Clube / 14 demais — 15/10 — cupom LIVELO
+- Livelo — Crocs — 12 / 8 — 15/10 — cupom LIVELO
+- Livelo — Meia Sola — 12 / 10 — 15/10 — cupom LIVELO
+- Livelo — O Boticário — 12 categoria pele / 3 demais — 15/10 a 18/10
+- Livelo — Havaianas — 10 / 6 — 15/10 — cupom LIVELO
+- Livelo — Morana — 10 / 8 — 15/10 a 18/10 — cupom LIVELO
+- Livelo — Piatã Natural — 10 / 8 — 15/10 — cupom LIVELO
+- Livelo — Aramis — 8 — 15/10 — cupom LIVELO
+- Livelo — Divvino — 8 / 6 selecionados; 1 resto — 15/10 a 22/10 — cupom LIVELO
+- Livelo — Democrata — 7 / 5 — 15/10 — cupom LIVELO
+- Livelo — Farmácias App — 7 (sem medicamentos, até R$500/CPF) — 15/10 — cupom LIVELO
+- Livelo — Bo.Bô 6/3, Dudalina 6/2, Individual 6/4, John John 6/2, Le Lis 6/2 — 15/10 a 16/10 — cupom LIVELO
+- Livelo — Bombay Herbs & Spices 6/4 — 15/10; Hering 6 — 15/10 — cupom LIVELO
+- Livelo — Nespresso — 6 Vertuo / 3 Original (só máquinas) — 15/10 a 19/10 — cupom LIVELO
+- Livelo — Dufrio 5/4 — 15/10; ABC da Construção 4 Clube selecionados / 1 — 15/10; Telhanorte 3/2 — 15/10 — cupom LIVELO
+- Livelo — Renner — 3 / 2 — 15/10 a 17/10
+- Esfera — Natura 10 (cupom ESFERA) 15–17/10; L'Occitane au Brésil 5 e en Provence 5 15–25/10; Fast Shop até 5 (cupom ESFERA) 15–18/10; Vivara 4 15–18/10; Farm Rio 2 15–19/10
+- Fora: Movida (aluguel de carro) e Suhai (seguro). Azul: sem post novo de parceiro. Clube Livelo e Clube Esfera: nada novo.
+
 ## 14/10/2026
 - Livelo — Loja do Mecânico — 10 Clube / 4 demais — 14/10
 - Livelo — Carrefour Mercado — 8 drogarias / 1 demais — 14/10
