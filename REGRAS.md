@@ -159,6 +159,52 @@ nele o link oficial da campanha (o link vai na mensagem SEM os parâmetros utm).
 link oficial da campanha
 ```
 
+5. Template das transferências para a **Azul Fidelidade** (pedido do dono em
+   15/10 — mais visual porque tem muitas faixas de bônus). Na seção "Bônus por
+   tempo de Clube Azul" vai o percentual TOTAL de cada faixa (bônus do Clube +
+   extra por tempo; ex.: 80% + 5% = 85%), não só o extra. "🎁 Bônus extra" só
+   entra se houver (pontos na 1ª transferência, cupom etc.). O link de indicação
+   do Clube Azul no final vai SEMPRE, exatamente como abaixo:
+
+```
+*ORIGEM → AZUL FIDELIDADE: ATÉ X% DE BÔNUS*
+
+📈 Bonificação
+• 50% de bônus → Clientes Azul Fidelidade
+• 80% de bônus → Assinantes Clube Azul
+
+📊 Bônus por tempo de Clube Azul
+• 85% de bônus → Assinantes Clube Azul de 6 a 11 meses
+• 90% de bônus → Assinantes Clube Azul de 1 a 2 anos
+• 100% de bônus → Assinantes Clube Azul de 3 a 4 anos
+• 110% de bônus → Assinantes Clube Azul há mais de 5 anos
+
+🎁 Bônus extra
+• Ganhe 2.000 pontos na 1ª transferência
+
+📅 Validade
+• De DD/MM/AAAA até DD/MM/AAAA
+
+⚠️ Importante
+• É necessário se cadastrar na promoção antes de transferir os pontos
+• Os pontos bônus serão creditados em até 15 dias úteis após o término da campanha
+• Os pontos bônus têm validade de 6 meses
+• Limite de bônus por CPF: 300.000 pontos
+• Limite de pontos bônus por tempo de Clube: 100.000 pontos por ano
+• A transferência deve ser feita da ORIGEM para o Azul Fidelidade
+
+🔗 Acesse:
+https://www.voeazul.com.br/br/pt/ofertas/<parceiro>
+
+Se você ainda não é assinante do Clube Azul, assine com o link abaixo e ganhe mais 1.000 milhas bônus:
+
+https://apps.voeazul.com.br/TudoAzulClub/share-mgm.html?hash=4F4kj%2Fmf5OIYZS8t7VJ3BYWCILyy572CPnB1uR9sFIMc-a
+```
+
+   No "ACABA HOJE", o título vira `*ACABA HOJE — ORIGEM → AZUL FIDELIDADE: ATÉ X% DE BÔNUS*`
+   e o resto da mensagem fica igual. Para a LATAM Pass (e outros destinos)
+   segue o template do item 4.
+
 ## Passo 3 — Verificação individual de cada candidata
 
 Pra cada loja levantada por qualquer um dos canais, entrar na página específica
