@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oportunidades {{DATA}}</title>
+<style>
+  :root { --bg:#f4f5f7; --card:#fff; --ink:#1d2330; --muted:#667085; --accent:#e5007e; --ok:#12805c; --line:#e3e6eb; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#12141a; --card:#1c1f27; --ink:#eceef2; --muted:#9aa3b2; --line:#2c303a; } }
+  * { box-sizing:border-box; }
+  body { margin:0; padding:16px; background:var(--bg); color:var(--ink); font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:720px; margin:0 auto; }
+  header h1 { font-size:22px; margin:0 0 4px; }
+  header p { margin:0 0 16px; color:var(--muted); font-size:13px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px; margin:0 0 16px; }
+  .top { display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin-bottom:8px; }
+  .num { font-weight:700; color:var(--accent); margin-right:4px; }
+  .badge { font-size:12px; padding:2px 8px; border-radius:999px; border:1px solid var(--line); color:var(--muted); }
+  .badge.validade { border-color:var(--ok); color:var(--ok); }
+  .card h2 { font-size:18px; margin:4px 0; }
+  .banner { display:block; width:100%; height:auto; border-radius:10px; margin:6px 0 8px; }
+  .pontos { font-size:34px; font-weight:800; color:var(--accent); margin:4px 0 10px; }
+  .fatos { display:grid; grid-template-columns:max-content 1fr; gap:4px 12px; margin:0 0 10px; font-size:14px; }
+  .fatos dt { color:var(--muted); }
+  .fatos dd { margin:0; }
+  details summary { cursor:pointer; color:var(--accent); font-weight:600; }
+  .msg-preview { white-space:pre-wrap; background:var(--bg); border-radius:10px; padding:12px; margin:8px 0; font-size:14px; }
+  button.copiar { border:0; background:var(--accent); color:#fff; padding:8px 14px; border-radius:8px; font-weight:600; cursor:pointer; }
+  .nada { color:var(--muted); }
+  footer.note { color:var(--muted); font-size:13px; border-top:1px solid var(--line); padding-top:12px; }
+  footer.note h3 { font-size:14px; margin:12px 0 4px; color:var(--ink); }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Oportunidades Livelo — {{DATA_EXTENSO}}</h1>
+  <p>Fontes: livelo.com.br (parceiros/Ofertas, carrossel de destaques, regulamentos ativos, Clube) · esfera.com.vc · comparemania.com.br (triagem)</p>
+</header>
+
+<!-- CARDS: repetir o bloco abaixo, um por oportunidade. Sem oportunidades: <p class="nada">Nenhuma oportunidade nova começando hoje.</p> -->
+<article class="card">
+  <div class="top">
+    <span class="num">#1</span>
+    <span class="badge">Conferido na página do parceiro (Livelo + Esfera)</span>
+    <span class="badge validade">Válido hoje, DD/MM</span>
+  </div>
+  <!-- Só em campanhas que NÃO são de compra em parceiro (Clube, upgrade, compra de pontos, transferência): -->
+  <!-- <img class="banner" src="img/AAAA-MM-DD-nome.png" alt="Banner da promoção"> -->
+  <h2>NOME DA LOJA</h2>
+  <div class="pontos">até X pts/R$</div>
+  <dl class="fatos">
+    <dt>Clube Livelo</dt><dd>X pts por R$1</dd>
+    <dt>Sem Clube</dt><dd>Y pts por R$1</dd>
+    <dt>Validade</dt><dd>DD/MM a DD/MM</dd>
+    <dt>Regras</dt><dd>cupom / categoria / prazo de crédito</dd>
+  </dl>
+  <details>
+    <summary>Mensagem pro WhatsApp</summary>
+    <div class="msg-preview">*NOME DA LOJA: BENEFÍCIO*
+
+📈 Bonificação
+· ...
+
+📅 Validade
+· ...
+
+⚠️ Importante
+· ...
+
+🔗 Acesse:
+https://...</div>
+    <button class="copiar" type="button">Copiar mensagem</button>
+  </details>
+</article>
+
+<footer class="note">
+  <h3>Uso interno — o que foi checado</h3>
+  <p>...</p>
+  <h3>Ficou de fora e por quê</h3>
+  <p>...</p>
+  <h3>Problemas nos sites</h3>
+  <p>...</p>
+</footer>
+</main>
+<script>
+document.querySelectorAll('button.copiar').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var t = b.parentElement.querySelector('.msg-preview').innerText;
+    var ok = function () { b.textContent = 'Copiado!'; setTimeout(function () { b.textContent = 'Copiar mensagem'; }, 1500); };
+    if (navigator.clipboard) { navigator.clipboard.writeText(t).then(ok, function () { fallback(t); ok(); }); }
+    else { fallback(t); ok(); }
+  });
+});
+function fallback(t) {
+  var a = document.createElement('textarea'); a.value = t; document.body.appendChild(a); a.select();
+  try { document.execCommand('copy'); } catch (e) {} a.remove();
+}
+</script>
+</body>
+</html>
