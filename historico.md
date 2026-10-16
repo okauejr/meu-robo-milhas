@@ -23,6 +23,7 @@ nunca apagar entradas antigas. Formato de cada linha:
 - Esfera — Eudora 5 16–23/10; C&A 5 16–18/10; Max Titanium 3 16–19/10; Probiótica 3 16–19/10
 - Transferência — ACABA HOJE C6 Bank → LATAM Pass (reenvio com banner, fim=16/10)
 - Transferência — Banco BV → Azul — 40% / 70% Clube Azul / até 100% por tempo de Clube + 2.000 na 1ª transferência, cadastro obrigatório, não vale Cartão Azul Itaú — link voeazul.com.br/br/pt/ofertas/bv [TRANSF início=15/10 fim=19/10] (post saiu 15/10 às 18h50, depois da checagem das 18h; enviada em 16/10 com banner; reenviar ACABA HOJE em 19/10)
+- 18h — Livelo: Brastemp — 4 selecionados / 2 demais — 16/10 a 18/10 (parceiro novo, selo "Nova" na listagem; achado pelo banner do carrossel de parceiros). Regulamentos e home sem novidade. 15h — Azul: Meu Resgate Favorito não apareceu (NADA às 15h30 e 15h41).
 - Fora: Ciclic (seguro viagem/celular), Universal Assistance (seguro viagem), Bradesco Consórcios; +20% Pix (cupom 20MAIS, uso de pontos); iPlace pré-venda no Shopping Livelo (aguardando decisão do dono sobre o Shopping Livelo). Clube Livelo e Clube Esfera: nada novo (Esfera "Até 300%" termina hoje, já enviada).
 
 ## 15/10/2026
